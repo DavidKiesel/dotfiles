@@ -1,0 +1,24 @@
+# .tclshrc
+
+set tcl_precision 17
+
+proc showenv envname {
+	global env
+	return "$env($envname)"
+}
+
+if {$tcl_interactive} {
+	if { [info exists expect_library] } {
+		regsub {/.*/} "$expect_library" "" prog
+	} else {
+		set prog "tclsh-[info patchlevel]"
+	}
+	package require tclreadline
+	proc ::tclreadline::prompt1 {} {
+		upvar #0 prog prog
+		return "\[0;36m$prog [showenv USER]@[info hostname] [pwd]\[0m\n% "
+	}
+	::tclreadline::Loop 
+}
+
+

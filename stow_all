@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DIR=`dirname "$0"`
+
+cd "$DIR"
+
+find \
+    * \
+    -maxdepth 0 \
+    -mindepth 0 \
+    -type d \
+    -exec stow '{}' \;
+
+exit 0

@@ -1,0 +1,48 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+numlockx on
+
+if [ -f "${HOME}/.xhostrc" ]
+then
+    . "${HOME}/.xhostrc"
+fi
+
+# https://help.ubuntu.com/community/IceWM
+xscreensaver -no-splash &
+
+# taskbar
+tint2 &
+
+# xterms
+xterm -name xterm-home &
+xterm -name xterm-home &
+#xterm -name xterm-root -e sudo -i &
+#xterm -name xterm-root -e sudo -i &
+xterm -name xterm-network &
+xterm -name xterm-network &
+xterm -name xterm-secnet &
+xterm -name xterm-secnet &
+xterm -name xterm-media &
+xterm -name xterm-media &
+xterm -name xterm-remote &
+xterm -name xterm-remote &
+
+# try to make sure x-systemd.automount works
+ls "${HOME}/net/public"
+ls "${HOME}/net/${USER}"

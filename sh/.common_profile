@@ -1,0 +1,125 @@
+# .common_profile
+
+# common sh-like shell code to execute at start of interactive login shells
+
+# tasks:
+#
+# - set common sh-like environment variables
+
+##############################################################################
+# set environment variables with ANSI codes
+
+if [ -f "${HOME}/.ansi_codes" ]
+then
+    . "${HOME}/.ansi_codes"
+fi
+
+##############################################################################
+# set locale
+
+LANG='en_US.UTF-8'
+export LANG
+
+LC_ALL='${LANG}"
+export LC_ALL
+
+##############################################################################
+# set PATH
+
+# List of directories in which shell should search for executables.
+
+if [ "`id -u`" = 0 ]
+then
+    PATH="${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+    PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+fi
+export PATH
+
+##############################################################################
+# set MANPATH
+
+# List of directories in which man command should search for man pages.
+
+MANPATH="/usr/share/man"
+export MANPATH
+
+##############################################################################
+# set LIBRARY_PATH;
+
+# From
+# https://stackoverflow.com/questions/4250624/ld-library-path-vs-library-path:
+#
+# LIBRARY_PATH is used by gcc before compilation to search directories
+# containing static libraries that need to be linked to your program.
+
+LIBRARY_PATH="/usr/local/lib:/usr/lib"
+export LIBRARY_PATH
+
+##############################################################################
+# set LD_LIBRARY_PATH
+
+# From
+# https://stackoverflow.com/questions/4250624/ld-library-path-vs-library-path:
+#
+# LD_LIBRARY_PATH is used by your program to search directories containing
+# shared libraries after it has been successfully compiled and linked.
+
+LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
+export LD_LIBRARY_PATH
+
+##############################################################################
+# set CPATH
+
+# From https://gcc.gnu.org/onlinedocs/gcc/Environment-Variables.html:
+#
+# CPATH specifies a list of directories to be searched as if specified with -I,
+# but after any paths given with -I options on the command line. This
+# environment variable is used regardless of which language is being
+# preprocessed.
+
+CPATH=/usr/local/include:/usr/include
+export CPATH
+
+##############################################################################
+# set EDITOR and VISUAL
+
+# https://wiki.archlinux.org/index.php/environment_variables
+
+if [ -n "${DISPLAY}" ]
+then
+    EDITOR=gvim
+else
+    EDITOR=vim
+fi
+export EDITOR
+
+VISUAL="${EDITOR}"
+export VISUAL
+
+##############################################################################
+# source files under ${HOME}/.common_profile.d
+
+if [ -d "${HOME}/.common_profile.d" ]
+then
+    for FILE in "${HOME}/.common_profile.d/"*
+    do
+        if [ -f "${FILE}" ]
+        then
+            . "${FILE}"
+        fi
+    done
+fi
+
+##############################################################################
+# prepend ${HOME} directories to *PATH 
+
+PATH="${HOME}/bin:${PATH}"
+
+MANPATH="${HOME}/man:${MANPATH}"
+
+LIBRARY_PATH="${HOME}/lib:${LIBRARY_PATH}"
+
+LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
+
+CPATH="${HOME}/include:${CPATH}"

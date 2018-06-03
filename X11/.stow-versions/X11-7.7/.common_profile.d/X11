@@ -1,0 +1,4 @@
+# .common_profile_files/X11
+
+XENVIRONMENT="${HOME}/.Xdefaults"
+export XENVIRONMENT

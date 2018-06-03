@@ -1,0 +1,133 @@
+# .ansi_codes
+
+# references:
+#
+# - https://en.wikipedia.org/wiki/ANSI_escape_code
+# - http://bluesock.org/~willkg/dev/ansi.html
+
+# example...
+# echo -e "${ansi_fg_cyan}Hello, world.${ansi_nc}"
+
+##############################################################################
+# normal foreground colors
+
+ansi_fg_black='\e[0;30m'
+ansi_fg_red='\e[0;31m'
+ansi_fg_green='\e[0;32m'
+ansi_fg_yellow='\e[0;33m'
+ansi_fg_blue='\e[0;34m'
+ansi_fg_magenta='\e[0;35m'
+ansi_fg_cyan='\e[0;36m'
+ansi_fg_white='\e[0;37m'
+
+ansi_fg_bright_black='\e[0;90m'
+ansi_fg_bright_red='\e[0;91m'
+ansi_fg_bright_green='\e[0;92m'
+ansi_fg_bright_yellow='\e[0;93m'
+ansi_fg_bright_blue='\e[0;94m'
+ansi_fg_bright_magenta='\e[0;95m'
+ansi_fg_bright_cyan='\e[0;96m'
+ansi_fg_bright_white='\e[0;97m'
+
+export ansi_fg_black
+export ansi_fg_red
+export ansi_fg_green
+export ansi_fg_yellow
+export ansi_fg_blue
+export ansi_fg_magenta
+export ansi_fg_cyan
+export ansi_fg_white
+
+export ansi_fg_bright_black
+export ansi_fg_bright_red
+export ansi_fg_bright_green
+export ansi_fg_bright_yellow
+export ansi_fg_bright_blue
+export ansi_fg_bright_magenta
+export ansi_fg_bright_cyan
+export ansi_fg_bright_white
+
+##############################################################################
+# normal background colors
+
+ansi_bg_black='\e[0;40m'
+ansi_bg_red='\e[0;41m'
+ansi_bg_green='\e[0;42m'
+ansi_bg_yellow='\e[0;43m'
+ansi_bg_blue='\e[0;44m'
+ansi_bg_magenta='\e[0;45m'
+ansi_bg_cyan='\e[0;46m'
+ansi_bg_white='\e[0;47m'
+
+ansi_bg_bright_black='\e[0;100m'
+ansi_bg_bright_red='\e[0;101m'
+ansi_bg_bright_green='\e[0;102m'
+ansi_bg_bright_yellow='\e[0;103m'
+ansi_bg_bright_blue='\e[0;104m'
+ansi_bg_bright_magenta='\e[0;105m'
+ansi_bg_bright_cyan='\e[0;106m'
+ansi_bg_bright_white='\e[0;107m'
+
+export ansi_bg_black
+export ansi_bg_red
+export ansi_bg_green
+export ansi_bg_yellow
+export ansi_bg_blue
+export ansi_bg_magenta
+export ansi_bg_cyan
+export ansi_bg_white
+
+export ansi_bg_bright_black
+export ansi_bg_bright_red
+export ansi_bg_bright_green
+export ansi_bg_bright_yellow
+export ansi_bg_bright_blue
+export ansi_bg_bright_magenta
+export ansi_bg_bright_cyan
+export ansi_bg_bright_white
+
+##############################################################################
+# bold foreground colors
+
+ANSI_FG_BLACK='\e[1;30m'
+ANSI_FG_RED='\e[1;31m'
+ANSI_FG_GREEN='\e[1;32m'
+ANSI_FG_YELLOW='\e[1;33m'
+ANSI_FG_BLUE='\e[1;34m'
+ANSI_FG_MAGENTA='\e[1;35m'
+ANSI_FG_CYAN='\e[1;36m'
+ANSI_FG_WHITE='\e[1;37m'
+
+ANSI_FG_BRIGHT_BLACK='\e[1;90m'
+ANSI_FG_BRIGHT_RED='\e[1;91m'
+ANSI_FG_BRIGHT_GREEN='\e[1;92m'
+ANSI_FG_BRIGHT_YELLOW='\e[1;93m'
+ANSI_FG_BRIGHT_BLUE='\e[1;94m'
+ANSI_FG_BRIGHT_MAGENTA='\e[1;95m'
+ANSI_FG_BRIGHT_CYAN='\e[1;96m'
+ANSI_FG_BRIGHT_WHITE='\e[1;97m'
+
+export ANSI_FG_BLACK
+export ANSI_FG_RED
+export ANSI_FG_GREEN
+export ANSI_FG_YELLOW
+export ANSI_FG_BLUE
+export ANSI_FG_MAGENTA
+export ANSI_FG_CYAN
+export ANSI_FG_WHITE
+
+export ANSI_FG_BRIGHT_BLACK
+export ANSI_FG_BRIGHT_RED
+export ANSI_FG_BRIGHT_GREEN
+export ANSI_FG_BRIGHT_YELLOW
+export ANSI_FG_BRIGHT_BLUE
+export ANSI_FG_BRIGHT_MAGENTA
+export ANSI_FG_BRIGHT_CYAN
+export ANSI_FG_BRIGHT_WHITE
+
+##############################################################################
+## no color
+
+ansi_nc='\e[0m'
+
+export ansi_nc

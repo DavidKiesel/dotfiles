@@ -1,0 +1,1 @@
+.stow-versions/gnupg-2.2.4/.common_profile.d

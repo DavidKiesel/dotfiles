@@ -1,0 +1,9 @@
+" from http://lwn.net/Articles/466501/#Comments
+" example invocation: gvim -x -S this_file
+" also see http://vim.wikia.com/wiki/Encryption
+set nobackup
+set noswapfile
+set nowritebackup
+set noundofile
+set viminfo=
+set cm=blowfish2

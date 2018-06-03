@@ -1,0 +1,7 @@
+# .inputrc
+
+# references:
+# - https://www.gnu.org/software/bash/manual/html_node/Command-Line-Editing.html
+# - https://ss64.com/bash/syntax-inputrc.html
+
+"\t": menu-complete

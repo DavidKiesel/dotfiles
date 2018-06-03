@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="firefox">
+    <action name="Execute"><execute>firejail --private=~/.firejail/firefox firefox -no-remote</execute></action>
+  </item>
+  <item label="gvim">
+    <action name="Execute"><execute>gvim</execute></action>
+  </item>
+  <item label="xterm">
+    <action name="Execute"><execute>xterm</execute></action>
+  </item>
+  <item label='Lock Screen (XScreenSaver)'>
+    <action name='Execute'><execute>xscreensaver-command -lock</execute></action>
+  </item>
+  <separator />
+  <!-- This requires the presence of the 'menu' package to work -->
+  <!--
+  <menu id="/Debian" />
+  <separator />
+  -->
+  <menu id="lxde-menu"
+      label="LXDE Menu"
+      execute="openbox-menu lxde-applications.menu"
+  />
+  <separator />
+  <!--
+  <menu id="gnome-menu"
+      label="Gnome Menu"
+      execute="/usr/bin/openbox-menu gnome-applications.menu" />
+  <separator />
+  -->
+  <menu id="client-list-menu" />
+  <separator />
+  <item label="ObConf">
+    <action name="Execute"><execute>obconf</execute></action>
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Restart">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>

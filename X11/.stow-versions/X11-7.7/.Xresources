@@ -1,0 +1,41 @@
+/* .Xresources */
+
+/*
+ * references:
+ *
+ * - https://wiki.archlinux.org/index.php/X_resources
+*/
+
+/*
+ * to load ${HOME}/.Xresources, replacing current settings:
+ * xrdb "${HOME}/.Xresources"
+ *
+ * to merge ${HOME}/.Xresources with current settings:
+ * xrdb -merge "${HOME}/.Xresources"
+*/
+
+XTerm*loginShell: true
+XTerm*saveLines: 1000
+XTerm*scrollBar: false
+XTerm*toolBar: false
+XTerm*background: black
+XTerm*foreground: white
+XTerm*fullCursor: true
+XTerm*cursorColor: yellow
+/* XTerm*geometry: 168x51+-4+-4 */
+XTerm*maximized: true
+XTerm*faceName:		Bitstream Vera Serif Mono
+XTerm*faceSize:		12
+
+xterm*loginShell: true
+xterm*saveLines: 1000
+xterm*scrollBar: false
+xterm*toolBar: false
+xterm*background: black
+xterm*foreground: white
+xterm*fullCursor: true
+xterm*cursorColor: yellow
+/* xterm*geometry: 168x51+-4+-4 */
+xterm*maximized: true
+xterm*faceName:		Bitstream Vera Serif Mono
+xterm*faceSize:		12

@@ -1,0 +1,4 @@
+# .common_profile_files/firefox
+
+MOZ_DISABLE_PANGO=1
+export MOZ_DISABLE_PANGO

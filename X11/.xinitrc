@@ -1,0 +1,1 @@
+.stow-versions/X11-7.7/.xinitrc

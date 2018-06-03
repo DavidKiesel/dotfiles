@@ -1,0 +1,1 @@
+.stow-versions/firefox-60.0.1/.common_profile.d

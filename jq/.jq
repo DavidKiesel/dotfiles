@@ -1,0 +1,1 @@
+.stow-versions/jq-1.5/.jq

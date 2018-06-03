@@ -1,0 +1,32 @@
+# .stow-local-ignore
+
+# https://www.gnu.org/software/stow/manual/stow.html#Types-And-Syntax-Of-Ignore-Lists
+
+##############################################################################
+# .stow_versions
+
+\.stow-versions
+
+##############################################################################
+# vim;
+# based on
+# https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+
+# Swap
+[._].*\.s[a-v][a-z]
+[._].*\.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session\.vim
+
+# Temporary
+\.netrwhist
+.*~
+
+# Auto-generated tag files
+tags
+
+# Persistent undo
+[._].*\.un~

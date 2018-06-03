@@ -1,0 +1,59 @@
+# .common_alias
+
+##############################################################################
+# directory listing
+
+alias dir='ls -lhF --time-style="+%Y-%m-%d %H:%M:%S" --color=auto --group-directories-first'
+
+##############################################################################
+# cd
+
+alias ..='cd ..'
+
+##############################################################################
+# make commands interactive
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+##############################################################################
+# pager
+
+alias m='less'
+
+##############################################################################
+# awk
+
+alias awkpipe="awk -F '|'"
+alias awkcolon="awk -F ':'"
+alias awkcomma="awk -F ','"
+
+##############################################################################
+# vim
+
+alias gview='gview >/dev/null 2>&1'
+alias gvim='gvim >/dev/null 2>&1'
+alias sgvim='gvim -x -S "${HOME}/.vimsec" >/dev/null 2>&1'
+alias sgview='gview -x -S "${HOME}/.vimsec" >/dev/null 2>&1'
+alias svim='vim -x -S "${HOME}/.vimsec" >/dev/null 2>&1'
+alias sview='view -x -S "${HOME}/.vimsec" >/dev/null 2>&1'
+
+##############################################################################
+# miscellaneous
+
+alias du='du -h'
+alias df='df -h'
+alias bc='bc -l'
+alias free='free -mt'
+f='tail -n +1 -f'
+fl='tail -n +1 -f "$(ls -1tr | tail -n 1)"'
+alias kc='keychain "${HOME}/.ssh/id_rsa"; . "${HOME}/.keychain/${HOSTNAME}-sh" > /dev/null'
+
+##############################################################################
+# firejail
+
+alias ff='firejail --private=~/.firejail/firefox firefox -no-remote >/dev/null 2>&1 &'
+alias sff='firejail --private=~/.firejail/firefox.trusted firefox -no-remote >/dev/null 2>&1 &'
+alias gff='firejail --private=~/.firejail/firefox.google firefox -no-remote >/dev/null 2>&1 &'
+alias aff='firejail --private=~/.firejail/firefox.amazon firefox -no-remote >/dev/null 2>&1 &'

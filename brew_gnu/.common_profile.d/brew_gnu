@@ -1,0 +1,21 @@
+# .common_profile_files/brew_gnu
+
+##############################################################################
+# add to PATH
+
+CHECK_DIR='/usr/local/opt/coreutils/libexec/gnubin'
+
+if [ -d "${CHECK_DIR}" ]
+then
+    PATH="${CHECK_DIR}:${PATH}"
+fi
+
+##############################################################################
+# add to MANPATH
+
+CHECK_DIR='/usr/local/opt/coreutils/libexec/gnuman'
+
+if [ -d "${CHECK_DIR}" ]
+then
+    PATH="${CHECK_DIR}:${PATH}"
+fi

@@ -1,0 +1,9 @@
+# .bashrc_notty
+
+# this file is automatically sourced if shell is not interactive and variable
+# BASH_ENV is set to this filename;
+# examples:
+#
+# - executing a shell script
+#
+# see https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html

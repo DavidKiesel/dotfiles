@@ -1,0 +1,1 @@
+.stow-versions/java-1.8.0_171/.common_profile.d

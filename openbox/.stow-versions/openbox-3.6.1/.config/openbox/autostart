@@ -44,11 +44,11 @@ xterm -name xterm-remote &
 xterm -name xterm-remote &
 
 # try to make sure x-systemd.automount works
-if [ -x "${HOME}/net/public" ]
+if [ -d "${HOME}/net/public" ]
 then
     ls "${HOME}/net/public"
 fi
-if [ -x "${HOME}/net/${USER}" ]
+if [ -d "${HOME}/net/${USER}" ]
 then
     ls "${HOME}/net/${USER}"
 fi

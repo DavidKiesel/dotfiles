@@ -27,9 +27,10 @@ package, symbolic links (and possibly directories) are created under your home
 directory corresponding to the files (and possibly directories) under the
 package directory.
 
-Note that, if the `stow` command encounters a pre-existing conflict, it will
-abort the entire operation.  If this happens, you could manually remove or move
-aside any pre-existing files that conflict.
+Note that, if the `stow` command for a given package encounters a pre-existing
+conflict, it will abort the entire operation for that package.  If this
+happens, you could manually remove or move aside any pre-existing files that
+conflict.
 
 ## Install All Packages
 

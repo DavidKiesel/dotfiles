@@ -9,6 +9,7 @@ then
     JAVA_HOME=`/usr/libexec/java_home`
 # debian
 elif [ -d '/usr/lib/jvm/default-java' ]
+then
     JAVA_HOME='/usr/lib/jvm/default-java'
 # failed to find JAVA_HOME
 else

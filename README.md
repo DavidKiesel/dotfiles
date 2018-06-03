@@ -53,6 +53,8 @@ cd "${HOME}/dotfiles"
 stow bash
 ```
 
+# Uninstall Packages
+
 ## Uninstall All Packages
 
 To uninstall all packages, execute the command below.
@@ -63,7 +65,7 @@ cd "${HOME}/dotfiles"
 ./unstow_all
 ```
 
-# Uninstall a Package
+## Uninstall a Package
 
 For example, let's say you only want to uninstall the `bash` package.
 

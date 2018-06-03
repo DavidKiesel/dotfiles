@@ -32,8 +32,8 @@ tint2 &
 # xterms
 xterm -name xterm-home &
 xterm -name xterm-home &
-#xterm -name xterm-root -e sudo -i &
-#xterm -name xterm-root -e sudo -i &
+xterm -name xterm-root &
+xterm -name xterm-root &
 xterm -name xterm-network &
 xterm -name xterm-network &
 xterm -name xterm-secnet &
@@ -44,5 +44,11 @@ xterm -name xterm-remote &
 xterm -name xterm-remote &
 
 # try to make sure x-systemd.automount works
-ls "${HOME}/net/public"
-ls "${HOME}/net/${USER}"
+if [ -x "${HOME}/net/public" ]
+then
+    ls "${HOME}/net/public"
+fi
+if [ -x "${HOME}/net/${USER}" ]
+then
+    ls "${HOME}/net/${USER}"
+fi

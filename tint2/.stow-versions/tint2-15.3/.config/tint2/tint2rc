@@ -118,7 +118,7 @@ mouse_scroll_down = iconify
 # Battery
 # comment line out line
 #battery = 0
-# enable batter item
+# enable battery item
 battery = 1
 battery_low_status = 10
 battery_low_cmd = notify-send "battery low"
